@@ -46,9 +46,9 @@ class CovidStatisticService(
             CovidStatisticCountry(
                     elements[0],
                     elements[1].replace(",", "").toLong(),
-                    elements[2].replace("[+,]", "").toLong(),
+                    elements[2].replace(Regex("[+,]+"), "").toLong(),
                     elements[3].replace(",", "").toLong(),
-                    elements[4].replace("[+,]", "").toLong(),
+                    elements[4].replace(Regex("[+,]+"), "").toLong(),
                     elements[5].replace(",", "").toLong(),
                     elements[6].replace(",", "").toLong(),
                     elements[7].replace(",", "").toLong()
